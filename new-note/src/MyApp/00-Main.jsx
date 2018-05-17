@@ -8,46 +8,57 @@ import Home from './01-Home'
 import Note from './02-Note'
 
 
-// // const homeButton = {
-// //     border: '7px solid white',
-// //     padding: '15px 50px',
-// //     boxShadow: '5px 5px 5px #888888',
-// //     // borderRadius: '10px',
-// //     fontFamily: 'Helvetica Neue',
-// //     fontSize: '23px',
-// //     color:'#8C9EFF',
-// //     display: 'inline',
-    
-// }
 
-// const noteButton = {
-//     border: '7px solid white',
-//     padding: '15px 50px',
-//     boxShadow: '5px 5px 5px #888888',
-//     // borderRadius: '10px',
-//     fontFamily: 'Helvetica Neue',
-//     fontSize: '23px'
-// }
+const buttonCont ={
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+}
 
-const myName = {
-    textAlign: 'center',
+const homeB = {
+    display: 'flex',
+    alignItem: 'center',
+    backgroundColor: '#5DCEB3',
+    border: 'none',
+    borderRadius: '3px',
+    color: 'white',
     fontFamily: 'Helvetica Neue',
-    fontColor: '#8C9EFF'
+    padding: '15px 32px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    display: 'inline  block',
+    fontSize: '16px',
+    margin: '25px 10px',
+    cursor: 'pointer',
+    alignItem: 'center',
+    left: '50%'
+    
 
+}
+
+const nameMy = {
+    width: '100%',
+    justifyContent: 'center',
+    display: 'flex',
+    
+    
 }
 
 export default class extends React.Component {
     render() {
 
         return (
+           
                 <HashRouter>
-                    <div className="MainContainer">
-
-                        <div className="menu1">
-                        <Link to="/">Home</Link>
-                        <Link to="/2" >Notes</Link>
-                        </div>
-
+                    
+                     <div className="MainContainer">
+                        
+                    <div className="menu1" style={buttonCont} >
+                            <Link to="/" div style={homeB}>Home</Link>
+                            <Link to="/2" style={homeB} >Notes</Link>
+                         </div>
+                         < br />
+                        
                         <hr />
 
                         <Route exact path="/" component={Home} />
@@ -55,10 +66,13 @@ export default class extends React.Component {
 
                         <br />
                         <hr />
-                        <div style={myName}>Dahee.J</div>
-
-                    </div>
+                    
+                    <div class="tag is-dark" style={nameMy}>Dahee.J</div>
+            
+                     </div>
+                    
                 </HashRouter>
+               
         )
     }
 }

@@ -59,14 +59,43 @@ export default class extends React.Component {
         }
 
 
+            const twoButton = {
+                justifyContent: 'center',
+                fontFamily: 'Helvetica Neue', 
+                fontSize: '13px',
+                margin: '8px 6px',
+
+
+            }
+
+            const boxStyle = {
+                margin: 'auto',
+                height: '120px',
+                alignItem: 'center',
+                display: 'flex',
+                boxShadow: '2px 2px 4px #999',
+                width: '300px',
+                fontFamily: 'Helvetica Neue',
+                fontSize: '16px',
+                color: '#B5B5B5',
+            }
+            const flexy = {
+                display: 'flex',
+                justifyContent: 'center',
+            }
+
+  
+
     return(
         <div>
-            <textarea cols="40" rows="5" value={this.state.xtext} onChange={ (e) => { this.setState({ xtext: e.target.value })} } />
+            <textarea cols="40" rows="5" style={boxStyle} value={this.state.xtext } onChange={ (e) => { this.setState({ xtext: e.target.value })} } />
 
-            <div>
-                <button  onClick={updateNote}> Update Note</button>
-                <button  onClick={deleteNote}> Delete Note</button>
+            <div style={flexy}>
+                
+                <button div class="button is-success" onClick={updateNote} style={twoButton}> Update </button>
+                <button div class="button is-danger"  onClick={deleteNote} style={twoButton} > Delete </button>
             </div>
+           
 
         </div>
         )
