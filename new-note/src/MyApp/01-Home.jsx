@@ -23,7 +23,3 @@ export default class extends React.Component{
     }
 }
 
-<div class="notification is-primary">
-    <button class="delete"></button>
-
-</div>
